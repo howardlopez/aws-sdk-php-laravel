@@ -3,6 +3,7 @@ test: remove-deps
 	make test-lumen
 
 test-laravel:
+	composer update
 	vendor/bin/phpunit
 
 test-lumen:
