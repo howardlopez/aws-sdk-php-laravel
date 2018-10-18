@@ -3,7 +3,6 @@ test: remove-deps
 	make test-lumen
 
 test-laravel:
-    rm /home/travis/build/aws/aws-sdk-php-laravel/composer.json
 	composer require laravel/framework
 	vendor/bin/phpunit
 	make uninstall-laravel
