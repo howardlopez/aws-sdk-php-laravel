@@ -17,6 +17,7 @@
         "illuminate/support": "~5.1"
     },
     "require-dev": {
+        "laravel/framework": "~5.1",
         "phpunit/phpunit": "~4.0|~5.0"
     },
     "suggest": {
