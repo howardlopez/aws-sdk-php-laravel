@@ -7,15 +7,19 @@ php:
   - 7.1
   - 7.2
   - hhvm
+  - nightly
 
 sudo: false
 
 matrix:
   allow_failures:
     - php: hhvm
+    - php: nightly
 
 install:
-  - if [[ ${TRAVIS_PHP_VERSION} == "5.5.9" ]]; then travis_retry composer require laravel/framework; fi
-  - travis_retry composer update --no-interaction --prefer-source
+  - if [[ ${TRAVIS_PHP_VERSION} == "5.5.9" ]];
+    then travis_retry composer require laravel/framework;
+    else travis_retry composer update --no-interaction --prefer-source;
+    fi
 
 script: make test
