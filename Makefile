@@ -3,7 +3,7 @@ test: remove-deps
 	make test-lumen
 
 test-laravel:
-    composer require laravel/framework
+	composer require laravel/framework
 	vendor/bin/phpunit
 
 test-lumen:
