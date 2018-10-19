@@ -15,9 +15,7 @@ matrix:
     - php: hhvm
 
 install:
-- if [[ ${TRAVIS_PHP_VERSION} == "5.5.9" ]];
-  then travis_retry composer require laravel/framework laravel/lumen-framework;
-  else travis_retry composer install --no-interaction --prefer-source;
-  fi
+  - if [[ ${TRAVIS_PHP_VERSION} == "5.5.9" ]]; then travis_retry composer require laravel/framework; fi
+  - travis_retry composer update --no-interaction --prefer-source
 
 script: make test
