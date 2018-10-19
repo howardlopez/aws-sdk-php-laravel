@@ -16,7 +16,7 @@ matrix:
 
 install:
 - if [[ ${TRAVIS_PHP_VERSION} == "5.5.9" ]];
-  then travis_retry composer require laravel/framework;
+  then travis_retry composer require laravel/framework laravel/lumen-framework;
   else travis_retry composer install --no-interaction --prefer-source;
   fi
 
