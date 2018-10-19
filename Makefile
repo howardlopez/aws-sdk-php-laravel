@@ -5,6 +5,7 @@ test: remove-deps
 test-laravel:
 	composer require laravel/framework
 	vendor/bin/phpunit
+	make uninstall-laravel
 
 test-lumen:
 	composer require laravel/lumen-framework
